@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>Observasi Matching Fleet</title>
     <meta charset="utf-8">
@@ -14,7 +13,7 @@
     <style>
         body {
             font: 400 15px/1.8 Lato, sans-serif;
-            color: #777;
+            color: #000000;
         }
 
         h3,
@@ -29,28 +28,8 @@
             padding: 80px 120px;
         }
 
-        .person {
-            border: 10px solid transparent;
-            margin-bottom: 25px;
-            width: 80%;
-            height: 80%;
-            opacity: 0.7;
-        }
-
         .person:hover {
             border-color: #f1f1f1;
-        }
-
-        .carousel-inner img {
-            /* -webkit-filter: grayscale(90%);
-    filter: grayscale(90%); make all photos black and white  */
-            width: 100%;
-            /* Set width to 100% */
-            margin: auto;
-        }
-
-        .carousel-caption h3 {
-            color: #fff !important;
         }
 
         @media (max-width: 600px) {
@@ -61,8 +40,8 @@
         }
 
         .bg-1 {
-            background: #882121;
-            color: #bdbdbd;
+            background: #030a4f;
+            color: #ffffff;
         }
 
         .bg-1 h3 {
@@ -130,7 +109,7 @@
         .navbar {
             font-family: Montserrat, sans-serif;
             margin-bottom: 0;
-            background-color: #2d2d30;
+            background-color: #959494;
             border: 0;
             font-size: 11px !important;
             letter-spacing: 4px;
@@ -139,16 +118,16 @@
 
         .navbar li a,
         .navbar .navbar-brand {
-            color: #d5d5d5 !important;
+            color: #000000 !important;
         }
 
         .navbar-nav li a:hover {
-            color: #fff !important;
+            color: #ff0026 !important;
         }
 
         .navbar-nav li.active a {
-            color: #fff !important;
-            background-color: #29292c !important;
+            color: #000000 !important;
+            background-color: #ffffff !important;
         }
 
         .navbar-default .navbar-toggle {
@@ -156,16 +135,16 @@
         }
 
         .open .dropdown-toggle {
-            color: #fff;
+            color: #000000;
             background-color: #555 !important;
         }
 
         .dropdown-menu li a {
-            color: #000 !important;
+            color: #7d7979 !important;
         }
 
         .dropdown-menu li a:hover {
-            background-color: red !important;
+            background-color: rgb(32, 30, 30) !important;
         }
 
         .responsive {
@@ -186,7 +165,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#myPage"><img src="background/headerppa.png"
-                        style="width: 100%; height: 30px; margin-top:-5px"></a>
+                        style="width: 100%; height: 35px; margin-top: -10px; margin-left: -10px"></a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
@@ -243,7 +222,7 @@
         <p>Waktu edar untuk suatu aktivitas tertentu dari alat muat (excavator).</p>
         <div class="timer-container row" style="margin-top:10px;">
             <div class="timer col-sm" data-timer="0" style="text-align:center; border-style: solid; padding: 5px;">
-                <p>Digging</p>
+                <p>Digging (detik)</p>
                 <p><span>0</span></p>
                 <button class="timer-start btn">Start</button>
                 <button class="timer-reset btn">Reset</button>
@@ -251,7 +230,7 @@
 
             <div class="timer col-sm" data-timer="1"
                 style="text-align:center; border-style: solid; padding: 5px; margin-top: 5px;">
-                <p>Swing Load</p>
+                <p>Swing Load (detik)</p>
                 <p><span>0</span></p>
                 <button class="timer-start btn">Start</button>
                 <button class="timer-reset btn">Reset</button>
@@ -259,7 +238,7 @@
 
             <div class="timer col-sm" data-timer="2"
                 style="text-align:center; border-style: solid; padding: 5px;margin-top: 5px;">
-                <p>Dumping</p>
+                <p>Dumping (detik)</p>
                 <p><span>0</span></p>
                 <button class="timer-start btn">Start</button>
                 <button class="timer-reset btn">Reset</button>
@@ -267,15 +246,15 @@
 
             <div class="timer col-sm" data-timer="3"
                 style="text-align:center; border-style: solid; padding: 5px;margin-top: 5px;">
-                <p>Swing Empty</p>
+                <p>Swing Empty (detik)</p>
                 <p><span>0</span></p>
                 <button class="timer-start btn">Start</button>
                 <button class="timer-stop btn">Stop</button>
                 <button class="timer-reset btn">Reset</button>
             </div>
         </div>
-        <p style="text-align:center">Cycle Time</p>
-        <p><input type="number" placeholder="Sum" data-input value="0" id="cycletimepc" style="text-align:center; width: 80px;"></p>
+        <p style="text-align:center">Cycle Time (detik)</p>
+        <p><input type="number" data-input value="" id="cycletimepc" style="text-align:center; width: 80px;"></p>
         <img src="background/safeandstrong.png" class="responsive" style="border-radius: 10px; padding: 30px; ">
     </div>
 
@@ -283,7 +262,7 @@
     <div id="cthauler" class="bg-1">
         <div class="container">
             <h3 class="text-center">CYCLE TIME HAULER</h3>
-            <p class="text-center">Waktu edar untuk suatu aktivitas tertentu dari alat angkut.</p>
+            <p class="text-center">Waktu edar untuk suatu aktivitas dari alat angkut.</p>
 
             <div class="row text-center">
                 <div class="col-sm-6">
@@ -337,7 +316,7 @@
                 <p style="margin-top: 20px;"><label for="">Match Factor</label></p>
                 <p style="margin-top: -10px;"><input type="number" id="mfactor" style="text-align: center; width: 80px;"></p>
                 <p>Angka yang menunjukkan hasil perbandingan antara produksi alat muat dengan alat angkut yang dilayani.</p>
-                <p style="font-weight: bold; color:#ff0000">Acuan MF = 0,9 (Engineering)</p>
+                <p style="font-weight: bold; color:#ff0000">Acuan MF = 0.9 (Engineering)</p>
             </div>
         </div>
         <div class="col-sm-6">
@@ -347,6 +326,7 @@
             </div>
         </div>
         <img src="background/safeandstrong.png" class="responsive" style="border-radius: 10px; padding: 30px;">
+        <footer class="footer" style="text-align: center;"><div>2022 &copy; Ignatius Ivan.</div></footer>
     </div>
 
     <script>
