@@ -275,8 +275,8 @@
             </div>
         </div>
         <p style="text-align:center">Cycle Time</p>
-        <p><input type="number" placeholder="Sum" data-input value="0" id="cycletimepc" style="text-align:center"></p>
-        <img src="background/safeandstrong.png" class="responsive" style="border-radius: 10px; padding: 30px;">
+        <p><input type="number" placeholder="Sum" data-input value="0" id="cycletimepc" style="text-align:center; width: 80px;"></p>
+        <img src="background/safeandstrong.png" class="responsive" style="border-radius: 10px; padding: 30px; ">
     </div>
 
     <!-- Cycle Time Hauler -->
@@ -287,40 +287,42 @@
 
             <div class="row text-center">
                 <div class="col-sm-6">
-                    <div style="padding:10px;">
+                    <div class="thumbnail" style="padding:10px;">
                         <p style="margin-top: 20px;"><label>Jarak dari Front ke Disposal (km)</label></p>
-                        <p style="margin-top: -10px;"><input type="number" id="distance" style="text-align: center;">
+                        <p style="margin-top: -10px;"><input type="number" id="distance" style="text-align: center; width: 80px;">
                         </p>
                     </div>
-                    <div>
+                    <div class="thumbnail" style="padding:10px;">
                         <p style="margin-top: 20px;"><label for="">Kecepatan hauler kosongan (km/jam)</label></p>
-                        <p style="margin-top: -10px;"><input type="number" id="vempty" style="text-align: center;"></p>
+                        <p style="margin-top: -10px;"><input type="number" id="vempty" style="text-align: center; width: 80px;"></p>
                         <p style="font-weight: bold; color:#ff0000; margin-top: -10px;">Acuan = 22 km/jam</p>
 
                         <p style="margin-top: 20px;"><label for="">Waktu travel hauler kosongan (menit)</label></p>
-                        <p style="margin-top: -10px;"><input type="number" id="tempty" style="text-align: center;"></p>
+                        <p style="margin-top: -10px;"><input type="number" id="tempty" style="text-align: center; width: 80px;"></p>
                     </div>
                 </div>
                 <div class="col-sm-6">
-                        <div>
+                    <div class="thumbnail">
+                        <div class="thumbnail" style="padding:10px;">
                             <p style="margin-top: 20px;"><label for="">Kecepatan hauler muatan (km/jam)</label></p>
-                            <p style="margin-top: -10px;"><input type="number" id="vload" style="text-align: center;"></p>
+                            <p style="margin-top: -10px;"><input type="number" id="vload" style="text-align: center; width: 80px;"></p>
                             <p style="font-weight: bold; color:#ff0000; margin-top: -10px;">Acuan = 20 km/jam</p>
 
                             <p style="margin-top: 20px;"><label for="">Waktu travel hauler muatan (menit)</label></p>
-                            <p style="margin-top: -10px;"><input type="number" id="tload" style="text-align: center;"></p>
+                            <p style="margin-top: -10px;"><input type="number" id="tload" style="text-align: center; width: 80px;"></p>
                         </div>
+                    </div>
                 </div>
                 <div class="col-sm-6">
-                    <div>
+                    <div class="thumbnail" style="padding:10px;">
                         <p style="margin-top: 20px;"><label for="">Jumlah Bucket</label></p>
-                        <p style="margin-top: -10px;"><input type="number" id="passing" style="text-align: center;"></p>
+                        <p style="margin-top: -10px;"><input type="number" id="passing" style="text-align: center; width: 80px;"></p>
 
                         <p style="margin-top: 20px;"><label for="">Loading Time (menit)</label></p>
-                        <p style="margin-top: -10px;"><input type="number" id="loadtime" style="text-align: center;"></p>
+                        <p style="margin-top: -10px;"><input type="number" id="loadtime" style="text-align: center; width: 80px;"></p>
 
                         <p style="margin-top: 20px;"><label for="">Cycle Time Hauler (menit)</label></p>
-                        <p style="margin-top: -10px;"><input type="number" id="cthd" style="text-align: center;"></p>
+                        <p style="margin-top: -10px;"><input type="number" id="cthd" style="text-align: center; width: 80px;"></p>
                     </div>
                 </div>
             </div>
@@ -331,17 +333,17 @@
         <h3>MATCHING FLEET</h3>
         <p>Menentukan perbandingan alat muat (loader) dan alat angkut (hauler) yang optimal.</p>
         <div class="col-sm-6">
-            <div style="text-align:center; border-style: solid; padding: 5px;">
+            <div class="thumbnail" style="text-align:center; border-style: solid; padding: 5px;">
                 <p style="margin-top: 20px;"><label for="">Match Factor</label></p>
-                <p style="margin-top: -10px;"><input type="number" id="mfactor" style="text-align: center;"></p>
+                <p style="margin-top: -10px;"><input type="number" id="mfactor" style="text-align: center; width: 80px;"></p>
                 <p>Angka yang menunjukkan hasil perbandingan antara produksi alat muat dengan alat angkut yang dilayani.</p>
                 <p style="font-weight: bold; color:#ff0000">Acuan MF = 0,9 (Engineering)</p>
             </div>
         </div>
         <div class="col-sm-6">
-            <div style="text-align:center; border-style: solid; padding: 5px; margin-top: 5px">
+            <div class="thumbnail" style="text-align:center; border-style: solid; padding: 5px;">
                 <p style="margin-top: 20px;"><label for="">Jumlah Hauler Optimal</label></p>
-                <p style="margin-top: -10px;"><input type="number" id="hauler" style="text-align: center;"></p>
+                <p style="margin-top: -10px;"><input type="number" id="hauler" style="text-align: center; width: 80px;"></p>
             </div>
         </div>
         <img src="background/safeandstrong.png" class="responsive" style="border-radius: 10px; padding: 30px;">
