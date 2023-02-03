@@ -409,7 +409,7 @@
 
         // jumlah hauler optimal
         function countJumlahhauler() {
-            let value = parseInt(inputCycletimehd.value) * inputMatchfactor.value / parseInt(inputLoadtime.value)
+            let value = inputCycletimehd.value * inputMatchfactor.value / inputLoadtime.value
             inputJumlahhauler.value = isFinite(value) ? value : 0
         }
 
