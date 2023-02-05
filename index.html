@@ -24,7 +24,10 @@
         }
 
         .container {
-            padding: 80px 120px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 80px;
+            padding-right: 80px;
         }
 
         .person:hover {
@@ -151,7 +154,6 @@
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
-
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -167,7 +169,6 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#myPage">HOME</a></li>
                     <li><a href="#ctloader">CYCLE TIME LOADER</a></li>
-                    <li><a href="#cthauler">CYCLE TIME HAULER</a></li>
                     <li><a href="#matchfactor">MATCHING FLEET</a></li>
                 </ul>
             </div>
@@ -180,24 +181,21 @@
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
         </ol>
-
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img src="background/hd176.jpg" class="responsive">
-                <div class="carousel-caption">
-                    <!-- <h3>Bench Loading</h3>
-          <p>The atmosphere in New York is lorem ipsum.</p> -->
-                </div>
+                <img src="background/2037.jpg" class="responsive">
+                <div class="carousel-caption"></div>
             </div>
-
             <div class="item">
                 <img src="background/hd244.jpg" class="responsive">
-                <div class="carousel-caption">
-                    <!-- <h3>Chicago</h3>
-          <p>Thank you, Chicago - A night we won't forget.</p> -->
-                </div>
+                <div class="carousel-caption"></div>
+            </div>
+            <div class="item">
+                <img src="background/hd176.jpg" class="responsive">
+                <div class="carousel-caption"></div>
             </div>
         </div>
 
@@ -213,17 +211,16 @@
     </div>
     <!-- Cycle Time Loader -->
     <div id="ctloader" class="container text-center">
-        <h3>CYCLE TIME LOADER</h3>
+        <h3 style="margin-top: 50px;">CYCLE TIME LOADER</h3>
         <!-- <p><em>We love music!</em></p> -->
-        <p>Waktu edar untuk suatu aktivitas tertentu dari alat muat (excavator).</p>
-        <div class="timer-container row" style="margin-top:10px;">
+        <p>Waktu edar untuk suatu aktivitas dari alat muat (loader).</p>
+        <div class="timer-container row" style="margin-top:5px;">
             <div class="timer col-sm" data-timer="0" style="text-align:center; border-style: solid; padding: 5px;">
                 <p>Digging (detik)</p>
                 <p><span>0</span></p>
                 <button class="timer-start btn">Start</button>
                 <button class="timer-reset btn">Reset</button>
             </div>
-
             <div class="timer col-sm" data-timer="1"
                 style="text-align:center; border-style: solid; padding: 5px; margin-top: 5px;">
                 <p>Swing Load (detik)</p>
@@ -231,7 +228,6 @@
                 <button class="timer-start btn">Start</button>
                 <button class="timer-reset btn">Reset</button>
             </div>
-
             <div class="timer col-sm" data-timer="2"
                 style="text-align:center; border-style: solid; padding: 5px;margin-top: 5px;">
                 <p>Dumping (detik)</p>
@@ -239,7 +235,6 @@
                 <button class="timer-start btn">Start</button>
                 <button class="timer-reset btn">Reset</button>
             </div>
-
             <div class="timer col-sm" data-timer="3"
                 style="text-align:center; border-style: solid; padding: 5px;margin-top: 5px;">
                 <p>Swing Empty (detik)</p>
@@ -251,17 +246,58 @@
         </div>
         <p style="text-align:center; margin-top: 15px">Cycle Time (detik)</p>
         <p><input type="number" data-input value="" id="cycletimepc" style="text-align:center; width: 80px;"></p>
-        <img src="background/safeandstrong.png" class="responsive" style="border-radius: 10px; padding: 30px; ">
+        <!-- <img src="background/safeandstrong.png" class="responsive" style="border-radius: 10px; padding: 30px; "> -->
     </div>
 
-    <!-- Cycle Time Hauler -->
-    <div id="cthauler" class="bg-1">
+    <!-- Match Factor -->
+    <div id="matchfactor" class="bg-1">
+        <div class="container">
+            <h3 class="text-center" style="margin-top: 50px">MATCH FACTOR</h3>
+            <p class="text-center">Menentukan jumlah alat angkut (hauler) yang optimal berdasarkan data observasi cycle time dan match factor.</p>
+            <div class="row text-center">
+                <div class="">
+                    <div class="thumbnail" style="text-align:center; border-style: solid; padding-top: 1px; padding-bottom: 1px; padding-left: 5px; padding-right: 5px;">
+                        <p style="margin-top: 20px;"><label for="">Jumlah Passing Bucket (kali)</label></p>
+                        <p style="margin-top: -10px;"><input type="number" id="passing" style="text-align: center; width: 80px;"></p>
+                        <p style="margin-top: 20px;"><label for="">Loading Time (menit)</label></p>
+                        <p style="margin-top: -10px;"><input type="number" id="loadtime" style="text-align: center; width: 80px;"></p>
+                    </div>
+                    <div class="thumbnail" style="text-align:center; border-style: solid; padding-top: 1px; padding-bottom: 1px; padding-left: 5px; padding-right: 5px;">
+                        <p style="margin-top: 20px;"><label for="">Cycle Time Hauler (menit)</label></p>
+                        <p style="margin-top: -10px;"><input type="number" id="cthd" style="text-align: center; width: 80px;"></p>
+                        <p>Waktu edar untuk suatu aktivitas dari alat angkut.</p>
+                    </div>
+                    <div class="thumbnail" style="text-align:center; border-style: solid; padding-top: 1px; padding-bottom: 1px; padding-left: 5px; padding-right: 5px;">
+                        <p style="margin-top: 20px;"><label for="">Match Factor</label></p>
+                        <p style="margin-top: -10px;"><input type="number" id="mfactor" style="text-align: center; width: 80px;"></p>
+                        <p>Angka yang menunjukkan hasil perbandingan antara produksi alat muat dengan alat angkut yang dilayani.</p>
+                        <p style="font-weight: bold; color:#ff0000">Acuan MF = 0.9 (Engineering)</p>
+                    </div>
+                    <div class="thumbnail" style="text-align:center; border-style: solid; padding-top: 1px; padding-bottom: 1px; padding-left: 5px; padding-right: 5px;">
+                        <p style="margin-top: 20px;"><label for="">Jumlah Hauler Optimal (unit)</label></p>
+                        <p style="margin-top: -10px;"><input type="number" id="hauler" style="text-align: center; width: 80px;"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div id="cthauler" class="bg-1">
         <div class="container">
             <h3 class="text-center">CYCLE TIME HAULER</h3>
             <p class="text-center">Waktu edar untuk suatu aktivitas dari alat angkut.</p>
 
             <div class="row text-center">
-                <div class="col-sm-6">
+                <div class="">
+                    <div class="timer col-sm" data-timer="0" style="text-align:center; border-style: solid; padding: 5px;margin-top: 5px;">
+                        <p>Cycle Time Hauler</p> 
+                        <p><span>0</span></p>
+                        <button class="timer-start btn">Start</button>
+                        <button class="timer-stop btn">Stop</button>
+                        <button class="timer-reset btn">Reset</button>
+                    </div>
+                    <div class="thumbnail" style="padding:10px; text-align: center;">
+                        <input type="number" data-input value="" id="cthd" style="text-align:center; width: 80px;">
+                    </div>
                     <div class="thumbnail" style="padding:10px; text-align: center;">
                         <p style="margin-top: 20px;"><label>Jarak dari Front ke Disposal (km)</label></p>
                         <p style="margin-top: -10px;"><input type="number" id="distance" style="text-align: center; width: 80px;">
@@ -303,11 +339,11 @@
             </div>
         </div>
         
-    </div>
+    </div> -->
     <div id="matchfactor" class="container text-center">
-        <h3 class="text-center">MATCHING FLEET</h3>
+        <!-- <h3 class="text-center">MATCHING FLEET</h3>
             <p class="text-center">Menentukan jumlah alat angkut (hauler) yang optimal berdasarkan data observasi dan match factor.</p>
-        <div class="col-sm-6">
+        <div class="">
             <div class="thumbnail" style="text-align:center; border-style: solid; padding: 5px;">
                 <p style="margin-top: 20px;"><label for="">Match Factor</label></p>
                 <p style="margin-top: -10px;"><input type="number" id="mfactor" style="text-align: center; width: 80px;"></p>
@@ -315,23 +351,23 @@
                 <p style="font-weight: bold; color:#ff0000">Acuan MF = 0.9 (Engineering)</p>
             </div>
         </div>
-        <div class="col-sm-6">
+        <div class="">
             <div class="thumbnail" style="text-align:center; border-style: solid; padding: 5px;">
                 <p style="margin-top: 20px;"><label for="">Jumlah Hauler Optimal</label></p>
                 <p style="margin-top: -10px;"><input type="number" id="hauler" style="text-align: center; width: 80px;"></p>
             </div>
-        </div>
+        </div> -->
         <img src="background/safeandstrong.png" class="responsive" style="border-radius: 10px; padding: 30px;">
         <footer class="footer" style="text-align: center;"><div>2022 &copy; Ignatius Ivan.</div></footer>
     </div>
 
     <script>
-        const inputDistance = document.querySelector('#distance')
-        const inputVempty = document.querySelector('#vempty')
-        const inputTempty = document.querySelector('#tempty')
+        // const inputDistance = document.querySelector('#distance')
+        // const inputVempty = document.querySelector('#vempty')
+        // const inputTempty = document.querySelector('#tempty')
 
-        const inputVload = document.querySelector('#vload')
-        const inputTload = document.querySelector('#tload')
+        // const inputVload = document.querySelector('#vload')
+        // const inputTload = document.querySelector('#tload')
 
         const inputPassing = document.querySelector('#passing')
         const inputCycletimepc = document.querySelector('#cycletimepc')
@@ -341,39 +377,38 @@
         const inputMatchfactor = document.querySelector('#mfactor')
         const inputJumlahhauler = document.querySelector('#hauler')
 
-        // fungsi waktu travel kosongan 
-        function countTempty() {
-            let value =  inputDistance.value / inputVempty.value * 60
-            inputTempty.value = isFinite(value) ? value : 0
-        }
+        // // fungsi waktu travel kosongan 
+        // function countTempty() {
+        //     let value =  inputDistance.value / inputVempty.value * 60
+        //     inputTempty.value = isFinite(value) ? value : 0
+        // }
 
-        inputDistance.addEventListener('input', function () {
-            countTempty()
-        })
+        // inputDistance.addEventListener('input', function () {
+        //     countTempty()
+        // })
 
-        inputVempty.addEventListener('input', function () {
-            countTempty()
-        })
+        // inputVempty.addEventListener('input', function () {
+        //     countTempty()
+        // })
 
-        inputVempty.addEventListener('change', function () {
-            countTempty()
-            countCycletimehd()
-        })
+        // inputVempty.addEventListener('change', function () {
+        //     countTempty()
+        //     countCycletimehd()
+        // })
 
-        // fungsi waktu travel muatan
-        function countTload() {
-            let value = inputDistance.value / inputVload.value * 60
-            inputTload.value = isFinite(value) ? value : 0
-        }
+        // // fungsi waktu travel muatan
+        // function countTload() {
+        //     let value = inputDistance.value / inputVload.value * 60
+        //     inputTload.value = isFinite(value) ? value : 0
+        // }
 
-        inputDistance.addEventListener('input', function () {
-            countTload()
-        })
+        // inputDistance.addEventListener('input', function () {
+        //     countTload()
+        // })
 
-        inputVload.addEventListener('input', function () {
-            countTload()
-            countCycletimehd()
-        })
+        // inputVload.addEventListener('input', function () {
+        //     countTload()
+        // })
 
         // loading time
         function countLoadtime() {
@@ -389,23 +424,23 @@
             countLoadtime()
         })
 
-        // Cycle Time Hauler
-        function countCycletimehd() {
-            let value = parseInt(inputLoadtime.value) + parseInt(inputTload.value) + parseInt(inputTempty.value) + 1
-            inputCycletimehd.value = isFinite(value) ? value : 0 
-        }
+        // // Cycle Time Hauler
+        // function countCycletimehd() {
+        //     let value = parseInt(inputLoadtime.value) + parseInt(inputTload.value) + parseInt(inputTempty.value) + 1.5
+        //     inputCycletimehd.value = isFinite(value) ? value : 0 
+        // }
 
-        inputLoadtime.addEventListener('input', function () {
-            countCycletimehd()
-        })
+        // inputLoadtime.addEventListener('input', function () {
+        //     countCycletimehd()
+        // })
 
-        inputTload.addEventListener('input', function () {
-            countCycletimehd()
-        })
+        // inputTload.addEventListener('input', function () {
+        //     countCycletimehd()
+        // })
 
-        inputTempty.addEventListener('input', function () {
-            countCycletimehd()
-        })
+        // inputTempty.addEventListener('input', function () {
+        //     countCycletimehd()
+        // })
 
         // jumlah hauler optimal
         function countJumlahhauler() {
