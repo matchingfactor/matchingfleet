@@ -42,7 +42,7 @@
         }
 
         .bg-1 {
-            background: #030a4f;
+            background: #550c0c;
             color: #ffffff;
         }
 
@@ -162,19 +162,18 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#myPage"><img src="background/headerppa.png"
-                        style="width: 100%; height: 35px; margin-top: -10px; margin-left: -10px"></a>
+                <a class="navbar-brand" href="#myPage"><img src="background/headerppa.png" style="width: 100%; height: 35px; margin-top: -10px; margin-left: -10px"></a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#myPage">HOME</a></li>
+                    <li><a href="#pendahuluan">PENDAHULUAN</a></li>
                     <li><a href="#ctloader">CYCLE TIME LOADER</a></li>
                     <li><a href="#matchfactor">MATCHING FLEET</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-
     <!-- Photos slider -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
@@ -209,6 +208,28 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
+
+    <div id="pendahuluan" class="bg-1">
+        <div class="container">
+            <h3 class="text-center" style="margin-top: 50px">PENDAHULUAN</h3>
+            <p class="text-center">Website ini bertujuan sebagai media untuk pengawas dalam melakukan observasi terkait matching fleet di lapangan.</p>
+            <div class="row text-center">
+                <div style="margin-bottom: 50px">
+                    <div class="thumbnail" style="text-align:center; border-style: solid; padding-top: 1px; padding-bottom: 1px; padding-left: 5px; padding-right: 5px;">
+                        <p style="margin-top: 20px;"><label for="">Petunjuk Penggunaan</label></p>
+                        <ul style="list-style-type: decimal; color: black; padding-right:10px; padding-left: 10px; text-align: justify;">
+                            <li>Lakukan observasi cycle time loader (excavator) dengan menggunakan Stopwatch yang ada pada halaman Cycle Time Loader.</li>
+                            <li>Masukkan jumlah passing sesuai aktual di lapangan, maka kolom Loading Time akan terisi.</li>
+                            <li>Lakukan observasi cycle time hauler (truck/hd) dengan mengamati waktu hauler siap loading di front hingga posisi siap loading kembali di front.</li>
+                            <li>Masukkan nilai Match Factor sesuai acuan Engineering. (Untuk mengurangi unit hauler mengantri di front, maka MF < 1)</li>
+                            <li>Lakukan observasi pada area front dan berkoordinasi dengan pengawas jalan dan disposal apabila unit hauler sudah sesuai.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Cycle Time Loader -->
     <div id="ctloader" class="container text-center">
         <h3 style="margin-top: 50px;">CYCLE TIME LOADER</h3>
@@ -244,7 +265,7 @@
                 <button class="timer-reset btn">Reset</button>
             </div>
         </div>
-        <p style="text-align:center; margin-top: 15px">Cycle Time (detik)</p>
+        <p style="text-align:center; margin-top: 15px">Cycle Time Loader (detik)</p>
         <p><input type="number" data-input value="" id="cycletimepc" style="text-align:center; width: 80px;"></p>
         <!-- <img src="background/safeandstrong.png" class="responsive" style="border-radius: 10px; padding: 30px; "> -->
     </div>
@@ -252,7 +273,7 @@
     <!-- Match Factor -->
     <div id="matchfactor" class="bg-1">
         <div class="container">
-            <h3 class="text-center" style="margin-top: 50px">MATCH FACTOR</h3>
+            <h3 class="text-center" style="margin-top: 50px">MATCHING FLEET</h3>
             <p class="text-center">Menentukan jumlah alat angkut (hauler) yang optimal berdasarkan data observasi cycle time dan match factor.</p>
             <div class="row text-center">
                 <div class="">
@@ -265,7 +286,7 @@
                     <div class="thumbnail" style="text-align:center; border-style: solid; padding-top: 1px; padding-bottom: 1px; padding-left: 5px; padding-right: 5px;">
                         <p style="margin-top: 20px;"><label for="">Cycle Time Hauler (menit)</label></p>
                         <p style="margin-top: -10px;"><input type="number" id="cthd" style="text-align: center; width: 80px;"></p>
-                        <p>Waktu edar untuk suatu aktivitas dari alat angkut.</p>
+                        <p>Waktu edar untuk suatu aktivitas dari alat angkut. <br>(loading time + travel muatan + spotting di disposal + dumping + travel kosongan + spotting di front)</p>
                     </div>
                     <div class="thumbnail" style="text-align:center; border-style: solid; padding-top: 1px; padding-bottom: 1px; padding-left: 5px; padding-right: 5px;">
                         <p style="margin-top: 20px;"><label for="">Match Factor</label></p>
@@ -340,7 +361,7 @@
         </div>
         
     </div> -->
-    <div id="matchfactor" class="container text-center">
+    <div class="container text-center">
         <!-- <h3 class="text-center">MATCHING FLEET</h3>
             <p class="text-center">Menentukan jumlah alat angkut (hauler) yang optimal berdasarkan data observasi dan match factor.</p>
         <div class="">
